@@ -51,7 +51,7 @@ function deleteLast() {
 }
 
 function calculate() {
-    // Gizli Şifre Kontrolü: Örneğin 1234= basınca kasayı aç
+    // Gizli Şifre Kontrolü: 1234 yazıp = basınca kasayı açar
     if (currentOp === '1234') {
         openVault();
         clearDisplay();
@@ -78,7 +78,7 @@ function calculate() {
     updateDisplay();
 }
 
-// Vault İşlemleri
+// Vault (Gizli Kasa) İşlemleri
 function openVault() {
     document.getElementById('vault-modal').style.display = 'flex';
     loadVaultNote();
