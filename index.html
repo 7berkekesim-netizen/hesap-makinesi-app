@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Makinesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator" id="calculator">
+        <div class="display">
+            <div id="previous-op"></div>
+            <div id="current-op">0</div>
+        </div>
+        <div class="buttons">
+            <button onclick="clearDisplay()" class="btn-func">C</button>
+            <button onclick="deleteLast()" class="btn-func">DEL</button>
+            <button onclick="appendOp('%')" class="btn-func">%</button>
+            <button onclick="appendOp('/')" class="btn-op">÷</button>
+
+            <button onclick="appendNum('7')">7</button>
+            <button onclick="appendNum('8')">8</button>
+            <button onclick="appendNum('9')">9</button>
+            <button onclick="appendOp('*')" class="btn-op">×</button>
+
+            <button onclick="appendNum('4')">4</button>
+            <button onclick="appendNum('5')">5</button>
+            <button onclick="appendNum('6')">6</button>
+            <button onclick="appendOp('-')" class="btn-op">-</button>
+
+            <button onclick="appendNum('1')">1</button>
+            <button onclick="appendNum('2')">2</button>
+            <button onclick="appendNum('3')">3</button>
+            <button onclick="appendOp('+')" class="btn-op">+</button>
+
+            <button onclick="appendNum('0')">0</button>
+            <button onclick="appendNum('.')">.</button>
+            <button onclick="calculate()" class="btn-equal">=</button>
+        </div>
+    </div>
+
+    <!-- Gizli Kasa Alanı -->
+    <div id="vault-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="vault-header">
+                <h2>🔐 Gizli Kasa</h2>
+                <button onclick="closeVault()" class="close-btn">&times;</button>
+            </div>
+            <div class="vault-body">
+                <textarea id="vault-text" placeholder="Gizli notlarınızı buraya yazın..."></textarea>
+                <div class="vault-actions">
+                    <button onclick="saveVaultNote()" class="save-btn">Kaydet</button>
+                    <span id="vault-status"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

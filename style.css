@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 320px;
+}
+
+.display {
+    background: #000;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: right;
+    margin-bottom: 20px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#previous-op {
+    color: #888;
+    font-size: 14px;
+    min-height: 18px;
+}
+
+#current-op {
+    font-size: 32px;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 18px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2d2d2d;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #3d3d3d;
+}
+
+.btn-op {
+    background: #ff9500;
+}
+
+.btn-op:hover {
+    background: #e08400;
+}
+
+.btn-func {
+    background: #a5a5a5;
+    color: #000;
+}
+
+.btn-func:hover {
+    background: #8e8e8e;
+}
+
+.btn-equal {
+    background: #ff9500;
+    grid-column: span 2;
+}
+
+/* Vault Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #252525;
+    padding: 24px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.vault-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#vault-text {
+    width: 100%;
+    height: 200px;
+    background: #181818;
+    border: 1fr solid #333;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    resize: none;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.vault-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.save-btn {
+    background: #4caf50;
+    padding: 10px 20px;
+}
